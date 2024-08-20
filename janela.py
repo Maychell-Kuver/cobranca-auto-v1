@@ -28,7 +28,7 @@ janela.title("Cobrança Condomínios")
 janela.geometry("400x400")
 janela.configure(bg="#7887AB")
 
-lista_emails= ["condominiori@consultsc.com.br", "alessandra@azenha.com.br", "leonidossantospereira@gmail.com", "atendimento@jotasempreendimentos.com.br"]
+lista_emails= ["email@gmail.com"]
 
 lista_consult = ["CONDOMÍNIO ROSA INTERNACIONAL",]
 
@@ -53,16 +53,16 @@ def atualizar():
     with open("arquivos_txt/email.txt", "w") as arquivo:
         arquivo.write(f"Olá,\n\nSegue relação de ordens de serviço em aberto do(s) condomínio(s):")
 
-    if cb_email.get() == "condominiori@consultsc.com.br":
+    if cb_email.get() == "email@gmail.com":
         cb_condo.config(values=lista_consult)
         cb_condo.current(0)
-    elif cb_email.get() == "alessandra@azenha.com.br":
+    elif cb_email.get() == "email2@gmail.com":
         cb_condo.config(values=lista_azenha)
         cb_condo.current(0)
-    elif cb_email.get() == "leonidossantospereira@gmail.com":
+    elif cb_email.get() == "email3@gmail.com":
         cb_condo.config(values=lista_lilico)
         cb_condo.current(0)
-    elif cb_email.get() == "atendimento@jotasempreendimentos.com.br":
+    elif cb_email.get() == "email4@gmail.com.br":
         with open("arquivos_txt/email.txt", "w") as arquivo:
             arquivo.write(f"Olá,\n\nSegue relação de ordens de serviço em aberto:")
         cb_condo.config(values=lista_jotas)
